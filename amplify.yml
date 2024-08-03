@@ -1,17 +1,22 @@
 version: 1
+env:
+  variables:
+    NODE_ENV: production
 frontend:
   phases:
     preBuild:
       commands:
         - nvm use 20
         - npm install
+    build:
+      commands:
+        - npm run build
+    postBuild:
+      commands:
         - >-
           mv
           node_modules
           compute/default/node_modules
-    build:
-      commands:
-        - npm run build
   artifacts:
     baseDirectory: .
     files:
