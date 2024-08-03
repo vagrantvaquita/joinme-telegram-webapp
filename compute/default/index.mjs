@@ -23,6 +23,7 @@ async function startServer() {
 
   app.use(compression())
 
+  await import('./server/entry.js')
   const sirv = (await import('sirv')).default
   app.use(sirv(`./client`))
 
