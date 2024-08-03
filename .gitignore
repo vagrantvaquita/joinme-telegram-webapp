@@ -131,7 +131,7 @@ dist
 
 # amplify
 compute/default/*
-!compute/default/index.js
+!compute/default/index.mjs
 
 # osx
 .DS_Store
