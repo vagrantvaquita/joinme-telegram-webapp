@@ -11,6 +11,7 @@
 //  - HatTip (https://github.com/hattipjs/hattip)
 //    - You can use Bati (https://batijs.dev/) to scaffold a Vike + HatTip app. Note that Bati generates apps that use the V1 design (https://vike.dev/migration/v1-design) and Vike packages (https://vike.dev/vike-packages)
 
+import fs from 'fs'
 import express from 'express'
 import compression from 'compression'
 import { renderPage } from 'vike/server'
@@ -53,6 +54,17 @@ async function startServer() {
       res.send(body)
     }
   })
+
+  console.log("\n" + process.cwd())
+  fs.readdirSync(process.cwd()).forEach(file => {
+    console.log(file);
+  });
+
+  console.log("\n/server")
+  fs.readdirSync(process.cwd() + "/server").forEach(file => {
+    console.log(file);
+  });
+  
 
   const port = process.env.PORT || 3000
   app.listen(port)
