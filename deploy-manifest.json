@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "framework": {
+        "name": "express",
+        "version": "4.19.2"
+   },
+   "routes": [
+        {
+            "path": "/*.*",
+            "target": {
+                "kind": "Static",
+                "cacheControl": "public, max-age=3600, immutable"
+            },
+            "fallback": {
+                "kind": "Compute",
+                "src": "default"
+            }
+        },
+        {
+            "path": "/server/assets/static/*",
+            "target": {
+                "kind": "Static",
+                "cacheControl": "public, max-age=3600, immutable"
+            }
+        },
+        {
+            "path": "/*",
+            "target": {
+                "kind": "Compute",
+                "src": "default"
+            }
+        }
+   ],
+   "computeResources": [
+        {
+            "name": "default",
+            "runtime": "nodejs20.x",
+            "entrypoint": "index.js"
+        }
+   ]
+}
