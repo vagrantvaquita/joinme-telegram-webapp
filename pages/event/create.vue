@@ -1,3 +1,21 @@
 <template>
-    <p>Hello World! this is create page</p>
+    <input v-model="message" placeholder="edit me">
+    <p>Message is: {{ message }}</p>
 </template>
+
+<script setup>
+import { ref, onMounted } from "vue"
+const message = ref("")
+
+onMounted(() => {
+    window.Telegram.WebApp.MainButton.setParams({
+        text: "Create Event",
+        is_active: true,
+        is_visible: true,
+    })
+    window.Telegram.WebApp.onEvent("mainButtonClicked", () => {
+        window.Telegram.WebApp.sendData({"message": message})
+    })
+})
+
+</script>
