@@ -101,4 +101,8 @@ input, select {
     width: 100%;
     font-size: 16px;
 } */
+
+input, select {
+    font-size: 16px;
+}
 </style>
