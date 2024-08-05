@@ -26,9 +26,9 @@ onMounted(() => {
     window.Telegram.WebApp.onEvent("mainButtonClicked", () => {
         window.Telegram.WebApp.showConfirm(
             "Are you sure you want to create this event?",
-            (continue) => {
-                if (continue) {
-                    window.Telegram.WebApp.sendData(JSON.stringify({message: message}));
+            (ok) => {
+                if (ok) {
+                    window.Telegram.WebApp.sendData(JSON.stringify({message: message.value}));
                     window.Telegram.WebApp.close();
                 }
             }
