@@ -1,5 +1,5 @@
 <template>
-    <form class="max-w-full mx-auto">
+    <form class="max-w-full mx-auto p-3">
 
         <div class="mb-6">
             <label for="category" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Select an option</label>
