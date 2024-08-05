@@ -1,18 +1,18 @@
 <template>
     <div>
-        <input v-model="title" placeholder="Title">
-        <input v-model="description" placeholder="Description">
-
-        <input v-model="url" placeholder="URL">
+        <p>Message is: {{ model.title }}</p>
+        <input v-model="model.title"  placeholder="Title">
+        <input placeholder="Description">
+        <input placeholder="URL">
+        <input type="date" min="2024-08-01">
+        <input type="time">
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue"
-const title = ref("")
-const description = ref("")
-const url = ref("")
 
+const model = defineModel({default: ""});
 
 onMounted(() => {
     window.Telegram.WebApp.MainButton.setParams({
