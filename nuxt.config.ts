@@ -5,9 +5,15 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
+      meta: [
+        { 
+          name: 'viewport', 
+          content: 'width=device-width, user-scalable=no' 
+        }
+      ],
       script: [
         {src: "https://telegram.org/js/telegram-web-app.js"}
       ]
-    }
+    },
   }
 })
