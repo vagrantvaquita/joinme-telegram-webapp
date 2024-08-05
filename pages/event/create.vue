@@ -2,8 +2,8 @@
     <form class="max-w-full mx-auto">
 
         <div class="mb-6">
-            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
-            <select id="category" v-model="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <label for="category" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Select an option</label>
+            <select id="category" v-model="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option selected disabled value="">Choose a category</option>
                 <option>⚽ Sports</option>
                 <option>✈️ Travel</option>
@@ -19,28 +19,28 @@
         </div>
 
         <div class="mb-6">
-            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Let your friend's now the name of the event:</label>
-            <input id="title" type="text" placeholder="Title" v-model="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="title" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Let your friend's now the name of the event:</label>
+            <input id="title" type="text" placeholder="Title" v-model="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div> 
 
         <div class="mb-6">
-            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describe what the event is about:</label>
-            <input id="description" type="text" placeholder="Description" v-model="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="description" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Describe what the event is about:</label>
+            <input id="description" type="text" placeholder="Description" v-model="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div> 
 
         <div class="mb-6">
-            <label for="location" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Where is going to happen?:</label>
-            <input id="location" type="text" placeholder="Location" v-model="location" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="location" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Where is going to happen?:</label>
+            <input id="location" type="text" placeholder="Location" v-model="location" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div> 
 
         <div class="mb-6">
-            <label for="dt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">When your friends should be there?:</label>
-            <input id="dt" type="datetime-local" v-model="datetime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="dt" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">When your friends should be there?:</label>
+            <input id="dt" type="datetime-local" v-model="datetime" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div> 
 
         <div class="mb-6">
-            <label for="url" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Add a telegram group so people can join:</label>
-            <input id="url" type="url" placeholder="URL" v-model="url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="url" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Add a telegram group so people can join:</label>
+            <input id="url" type="url" placeholder="URL" v-model="url" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div> 
 
     </form>
