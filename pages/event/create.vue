@@ -25,10 +25,10 @@ onMounted(() => {
             "Are you sure you wanna create this event?",
             (ok) => {
                 if (ok == true) {
-                    window.Telegram.WebApp.sendData(JSON.stringify({message: message}))
-                    window.Telegram.WebApp.close()
+                    window.Telegram.WebApp.sendData(JSON.stringify({message: message}));
+                    window.Telegram.WebApp.close();
                 } else {
-                    window.Telegram.WebApp.showAlert("You cancelled!")
+                    window.Telegram.WebApp.showAlert("You cancelled!");
                 }
             }
         )
