@@ -10,6 +10,7 @@ var params = {
 };
 
 export default defineEventHandler(async (event) => {
+  console.log(process.env)
   const data = await storage.scan(params).promise();
   const response = data.Items?.map((e) => {
       return AWS.DynamoDB.Converter.unmarshall(e)
