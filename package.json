@@ -11,9 +11,20 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "aws-amplify": "^6.5.0",
     "aws-sdk": "^2.1671.0",
     "flowbite": "^2.4.1",
     "nuxt": "^3.12.4",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.0.4",
+    "@aws-amplify/backend-cli": "^1.2.2",
+    "aws-cdk": "^2.151.0",
+    "aws-cdk-lib": "^2.151.0",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.23.0",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
   }
 }
