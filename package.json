@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-lambda-aws",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "nuxt build && sls deploy"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.624.0",
+    "@aws-sdk/lib-dynamodb": "^3.624.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "nuxt": "^3.12.4",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "serverless": "^3.39.0"
+  }
+}

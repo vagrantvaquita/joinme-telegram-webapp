@@ -1,0 +1,35 @@
+service: joinme-webapp
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  stage: prod
+  region: us-east-1
+  runtime: nodejs20.x
+  deploymentBucket:
+    name: app-vagrantvaquita-${sls:stage}
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "dynamodb:GetItem"
+            - "dynamodb:Query"
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:PutItem"
+          Resource:
+            - 'arn:aws:dynamodb:us-east-1:${aws:accountId}:table/joinme-prod-events'
+
+package:
+  individually: true
+
+functions:
+  nuxt:
+    handler: dist/server/index.handler
+    package:
+      patterns:
+        - '!**'
+        - dist/**
+    events:
+      - httpApi: '*'
